@@ -10,9 +10,9 @@ Library for the PTSolns *I2Connect: Digit Display* module. Available through bot
 
 ## Overview
 
-The *I2Connect: Digit Display* is a compact, high-visibility 8-digit (dual 4-digit) 7-segment display module driven by the HT16K33A LED controller[cite: 1]. Designed as part of the I2Connect Series, the module provides a simple and reliable way to add numerical readouts, timers, and UI elements to embedded systems. 
+The *I2Connect: Digit Display* is a compact, high-visibility 8-digit (dual 4-digit) 7-segment display module driven by the HT16K33A LED controller. Designed as part of the I2Connect Series, the module provides a simple and reliable way to add numerical readouts, timers, and UI elements to embedded systems. 
 
-The display communicates over the industry standard I2C interface, offloading all LED multiplexing, blinking, and dimming tasks to the integrated hardware driver to ensure zero software overhead[cite: 1]. The module is compatible with both 3.3V and 5V systems, making it suitable for use with a wide range of popular microcontroller platforms. 
+The display communicates over the industry standard I2C interface, offloading all LED multiplexing, blinking, and dimming tasks to the integrated hardware driver to ensure zero software overhead. The module is compatible with both 3.3V and 5V systems, making it suitable for use with a wide range of popular microcontroller platforms. 
 
 Like all I2Connect modules, it connects using dual Qwiic® compatible connectors to easily integrate into existing I2C systems without soldering, while the preinstalled right-angle header provides direct access to the I2C bus for breadboard-based prototyping.
 
@@ -43,11 +43,11 @@ The following modules are part of the *I2Connect* Series:
 ## Key Features
 
 * Dual 4-digit 7-segment displays (8 digits total).
-* Native hardware multiplexing via HT16K33A[cite: 1].
+* Native hardware multiplexing via HT16K33A.
 * Default I2C address of 0x70.
 * 3.3V and 5V logic and power compatibility.
-* 16-step hardware digital dimming via pulse width modulation[cite: 1].
-* Integrated hardware blink rates (0.5Hz, 1Hz, 2Hz)[cite: 1].
+* 16-step hardware digital dimming via pulse width modulation.
+* Integrated hardware blink rates (0.5Hz, 1Hz, 2Hz).
 * Unified 8-digit or split independent 4-digit formatting control.
 * Dual Qwiic® compatible 4-pin JST SH connectors for daisy-chaining.
 * Breadboard-friendly 4-pin 2.54mm angled male header.
