@@ -81,7 +81,6 @@ For maximum compatibility, the module also includes a preinstalled angled male h
 | Interface               | I2C                                 |
 | I2C Address             | 0x70 (Default)                      |
 | Operating Voltage       | 3.3 V / 5 V Rated                   |
-| Communication Speed     | Standard (100 kHz) / Fast (400 kHz) |
 | Connectors              | 2x 4-pin 1mm JST SH                 |
 
 ---
@@ -128,3 +127,89 @@ Features of the [*PTSolns IDE*](https://ptsolns.com/ide) include:
 The [*PTSolns IDE*](https://ptsolns.com/ide) can be used alongside the Arduino IDE and supports many PTSolns development boards out of the box.
 
 ---
+
+## Quick Start
+
+```cpp
+#include <Wire.h>
+#include <PTSolns_I2Connect_DigitDisplay.h>
+
+PTSolns_I2Connect_DigitDisplay display;
+
+void setup()
+{
+    Serial.begin(115200);
+    Wire.begin();
+
+    if (display.begin(0x70, Wire)) {
+        Serial.println("Digit Display initialized!");
+    } else {
+        Serial.println("Failed to find Digit Display.");
+        while(1);
+    }
+}
+
+void loop()
+{
+    // Print a number across all 8 digits and push to hardware
+    display.print8(12345678);
+    display.writeDisplay();
+    delay(2000);
+    
+    // Clear the screen and print to independent sides
+    display.clear();
+    display.printLeft(100);
+    display.printRight(99);
+    display.writeDisplay();
+    delay(2000);
+}
+```
+---
+
+## Library Functions
+
+| Function          | Description                                   |
+| ----------------- | ----------------------------------------------|
+| begin()           | Initialize the display driver and I2C bus     |
+| clear()           | Clear the local memory buffer                 |
+| writeDisplay()    | Push the local buffer to the HT16K33A hardware|
+| print8()          | Print an integer across all 8 digits          |
+|printLeft()        | Print an integer to the left 4-digit block    |
+| printRight()      | Print an integer to the right 4-digit block   |
+|setBrightness()    |Set 16-step hardware dimming (0 to 15)         |
+|blinkRate()        |Set hardware blink rate (0=off, 1, 2, or 3)    |
+|writeDigitRaw()    |Write raw hexadecimal bitmasks to digits       |
+
+
+---
+
+## Basic Functions
+
+## Initialization
+
+```cpp
+// Initializes display at default address 0x70
+display.begin();
+```
+---
+Printing Justified Data
+```cpp
+// Print the number 42 pushed to the far left of the display
+display.print8(42, true);
+display.writeDisplay();
+
+// Print the number 42 pushed to the far right of the display
+display.print8(42, false);
+display.writeDisplay();
+```
+---
+Hardware Dimming
+```cpp
+// Set the display brightness to maximum (15)
+display.setBrightness(15);
+
+// Set the display brightness to minimum visibility (0)
+display.setBrightness(0);
+```
+---
+
