@@ -192,7 +192,7 @@ void loop()
 display.begin();
 ```
 ---
-Printing Justified Data
+## Printing Data
 ```cpp
 // Print the number 42 pushed to the far left of the display
 display.print8(42, true);
@@ -203,7 +203,7 @@ display.print8(42, false);
 display.writeDisplay();
 ```
 ---
-Hardware Dimming
+## Hardware Dimming
 ```cpp
 // Set the display brightness to maximum (15)
 display.setBrightness(15);
@@ -211,5 +211,51 @@ display.setBrightness(15);
 // Set the display brightness to minimum visibility (0)
 display.setBrightness(0);
 ```
+---
+## Typical Applications
+
+* Digital clocks and timers
+* Sensor readouts and telemetry dashboards
+* Counters and scoreboards
+* General purpose embedded user interfaces
+
+---
+
+## Included Examples
+
+| Example                | Description                                         |
+| ---------------------- | ----------------------------------------------------|
+| 01_UnifiedMode         | Basic continuous 8-digit printing and justification |
+| 02_SplitMode           | Independent left/right 4-digit block formatting     |
+| 03_HardwareFeatures    | Hardware dimming and integrated oscillator blinking |
+| 04_MarqueeAnimation    |   Scrolling raw segment bitmask animation           |
+
+---
+
+## Documentation & Resources
+
+Additional resources are available through the PTSolns Documentation Repository, including:
+
+* Datasheets
+
+* Schematics
+
+* Pinout diagrams
+
+* 3D models
+
+* Fritzing files
+
+* Tutorials
+
+* Example projects
+
+* [PTSolns Documentation Repository](https://docs.ptsolns.com)
+
+* [PTSolns Website](https://ptsolns.com)
+
+* [Contact Support](https://ptsolns.com/contact-us)
+
+* [PTSolns IDE](https://ptsolns.com/ide)
 ---
 
