@@ -78,7 +78,6 @@ For maximum compatibility, the module also includes a preinstalled angled male h
 | Parameter               | Value                               |
 | ----------------------- | ----------------------------------- |
 | Display Type            | 2x 4-Digit 7-Segment (8 Digits)     |
-| Driver IC               | HT16K33A LED Controller             |
 | Interface               | I2C                                 |
 | I2C Address             | 0x70 (Default)                      |
 | Operating Voltage       | 3.3 V / 5 V Rated                   |
@@ -93,3 +92,39 @@ The *I2Connect: Digit Display* module uses a default I2C address of:
 
 ```text
 0x70
+```
+If multiple Digit Display modules are required in the same system, an I2C multiplexer can be used. The PTSolns I2Connect: MUX module provides four independent I2C channels, allowing up to four identical displays to be connected to a single microcontroller bus.
+
+---
+
+## *PTSolns IDE*
+
+The [*PTSolns IDE*](https://ptsolns.com/ide) is a free desktop application for programming PTSolns microcontroller development boards and compatible Arduino platforms.
+
+This library is available directly through both the PTSolns IDE Library Manager and the Arduino Library Manager.
+
+To install:
+
+1. Open the PTSolns IDE (or Arduino IDE).
+2. Open the Library Manager.
+3. Search for:
+
+```text
+I2Connect_DigitDisplay
+```
+
+4. Click Install.
+
+Features of the [*PTSolns IDE*](https://ptsolns.com/ide) include:
+
+* Integrated board management
+* Built in serial monitor
+* Library management
+* Example project browser
+* Support for over 8,500 third party libraries
+* Built in CH340 USB driver support
+* Open source and community driven
+
+The [*PTSolns IDE*](https://ptsolns.com/ide) can be used alongside the Arduino IDE and supports many PTSolns development boards out of the box.
+
+---
