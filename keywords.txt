@@ -1,1 +1,10 @@
-
+PTSolns_I2Connect_DigitDisplay	KEYWORD1
+begin	KEYWORD2
+clear	KEYWORD2
+writeDisplay	KEYWORD2
+setBrightness	KEYWORD2
+blinkRate	KEYWORD2
+print8	KEYWORD2
+printLeft	KEYWORD2
+printRight	KEYWORD2
+writeDigitRaw	KEYWORD2
