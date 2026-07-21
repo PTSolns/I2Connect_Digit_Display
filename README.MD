@@ -109,7 +109,7 @@ To install:
 3. Search for:
 
 ```text
-I2Connect_DigitDisplay
+I2Connect_Digit_Display
 ```
 
 4. Click Install.
