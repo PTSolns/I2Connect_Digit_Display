@@ -1,4 +1,4 @@
-PTSolns_I2Connect_DigitDisplay	KEYWORD1
+PTSolns_I2Connect_Digit_Display	KEYWORD1
 begin	KEYWORD2
 clear	KEYWORD2
 writeDisplay	KEYWORD2
