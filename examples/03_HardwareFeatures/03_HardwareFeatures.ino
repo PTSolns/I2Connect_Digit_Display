@@ -22,14 +22,14 @@
 // fully compatible with both 3.3V and 5V microcontroller systems.
 
 #include <Wire.h>
-#include <PTSolns_I2Connect_DigitDisplay.h>
+#include <PTSolns_I2Connect_Digit_Display.h>
 
 // User Settings
 const uint32_t SERIAL_BAUD  = 115200; // Serial baud setting
 const uint32_t I2C_CLOCK_HZ = 100000; // I2C clock speed. Keep at 100 kHz most of the time.
 const uint8_t  I2C_ADDRESS  = 0x70;   // Default address for the HT16K33A Digit Display
 
-PTSolns_I2Connect_DigitDisplay display;
+PTSolns_I2Connect_Digit_Display display;
 
 void setup() {
     Serial.begin(SERIAL_BAUD);
