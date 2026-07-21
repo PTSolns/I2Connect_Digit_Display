@@ -24,7 +24,7 @@
 // fully compatible with both 3.3V and 5V microcontroller systems.
 
 #include <Wire.h>
-#include "PTSolns_I2Connect_DigitDisplay.h"
+#include <PTSolns_I2Connect_DigitDisplay.h>
 
 // User Settings
 const uint32_t SERIAL_BAUD  = 115200; // Serial baud setting
